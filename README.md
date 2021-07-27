@@ -1,3 +1,4 @@
 # 2805-3815ICT
-Group Pac-Man Project/n
+Group Pac-Man Project
+
 Hello group, adding this as a test, feel free to do the same!
