@@ -25,6 +25,15 @@ PAC_LOGO = pygame.transform.scale(PAC_LOGO,(450,240))
 clock = pygame.time.Clock()
 pygame.mixer.init()
 pygame.mixer.music.load('pacmanloop.wav')
+ 
+#PULL SPRITES
+PAC_STATE_1 = pygame.image.load('pac01.png')
+PAC_STATE_1 = pygame.transform.scale(PAC_STATE_1,(SPRITEWIDTH,SPRITEHEIGHT))
+PAC_STATE_2 = pygame.image.load('pac02.png')
+PAC_STATE_2 = pygame.transform.scale(PAC_STATE_2,(SPRITEWIDTH,SPRITEHEIGHT))
+PAC_STATE_3 = pygame.image.load('pac03.png')
+PAC_STATE_3 = pygame.transform.scale(PAC_STATE_3,(SPRITEWIDTH,SPRITEHEIGHT))
+
 
 WIN = pygame.display.set_mode((WIDTH,HEIGHT))
 pygame.display.set_caption("Pac-Man")
@@ -181,7 +190,7 @@ class App:
         while self.running:
 
             
-
+            
 
             #Check input from keyboard and change direction/quit
             self.checkInput()

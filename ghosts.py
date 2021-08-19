@@ -1,9 +1,6 @@
 
 
 class Ghost():
-
-
-
     def __init__(self):
         #The x and y are co-ordinates on the grid, not the location on the screen
         self.pos_x=5
@@ -13,8 +10,6 @@ class Ghost():
         pass
 
 
-
-
     def findPacMan(self):
 
         pass
@@ -22,9 +17,7 @@ class Ghost():
 
     def Death(self):
 
-
         pass
-
 
 
     #Ghost goes to pacman. It's just temporary movement, so I might come back to this.

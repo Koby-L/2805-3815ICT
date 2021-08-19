@@ -1,6 +1,6 @@
 import pygame
 
-from mk1settings import *
+from settings import *
 import random
 class Environment():
     #This is the grid that the game is built upon
@@ -30,10 +30,7 @@ class Environment():
         numNeighbouringWalls=0
 
         #Check in a 3x3 grid and count the walls we see.
-
-
-
-        
+     
         for y in range(py-1,py+2):
             for x in range(px-1,px+2):
                 if self.pointOnGrid(x,y) :#Make sure the point is actaully on the grid (Avoid out indexing)

@@ -2,22 +2,21 @@ from numpy import absolute
 
 import math
 
-from mk1settings import *
+from settings import *
 #Even though he technically isn't a sprite I'm leaving the code like this just incase we need to make him one.
+
 class Pac (pygame.sprite.Sprite):
     def __init__(self,pos_x,pos_y):
 
         super().__init__()
-        self.pos_x = pos_x
-        self.pos_y=pos_y
-        self.direction=1
+        self.pos_x = pos_x      #x position of player
+        self.pos_y=pos_y        #y position of character
+        self.direction=1        #orientation of character
+        self.lives = 3          #remaining tries for player
         #1=RIGHT;2=LEFT;3=UP;4=DOWN
 
     def PacMove(self,grid):
         #Moves the pacman sprite through the grid
-
-
-
         '''
         The thing about the PacMove is that I had to modify it to allow pacman to move slowly over the screen since the main
         method of keeping track in everything is mk1main.py grid variable.
@@ -38,14 +37,10 @@ class Pac (pygame.sprite.Sprite):
         I should also stress that the teleportation (tunnels on the left and right edges of the screen) hasn't been implemented. So going to those
         will probably make the game crash from indexing out of list range
         '''
-
-
         #I should also mention that those pairs of commented out lines actually had pacman existing in the amze but I've decided to take it out for now, 
         #Leaving the lines just in case we need to use those in the future.
 
-
-
-        #Direction 4 is down
+        #1=RIGHT   2=LEFT   3=UP   4=DOWN
         if self.direction==4:
             
             if grid[math.ceil(self.pos_x+0.25)][math.floor(self.pos_y)] == 1:
